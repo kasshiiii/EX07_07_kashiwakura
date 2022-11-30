@@ -15,7 +15,6 @@ private:
     double width;
     double height;
     double depth;
-
 public:
     Box(
         double width,   //幅
@@ -37,7 +36,6 @@ class Cylinder :Solid {
 private:
     double radius;
     double height;
-
 public:
     Cylinder(
         double bottom,   //底辺の半径
@@ -59,7 +57,6 @@ class Cone :Solid {
 private:
     double bottom;
     double height;
-
 public:
     Cone(
         double bottom,   //底辺の半径
@@ -80,7 +77,6 @@ public:
 class Sphere :Solid {
 private:
     double radius;
-
 public:
     Sphere(
         double bottom) { //半径
@@ -96,7 +92,6 @@ public:
     }
 };
 
-
 int main()
 {
     Box box{ 5,4,3 };
@@ -111,6 +106,4 @@ int main()
     cout << "Coneの表面積 = " << cone.GetSurface() << endl;
     cout << "Sphereの体積 = " << sphere.GetVolume() << endl;
     cout << "Sphereの表面積 = " << sphere.GetSurface() << endl;
-
-
 }
