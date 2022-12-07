@@ -24,6 +24,15 @@ public:
         this->height = height;
         this->depth = depth;
     }
+    double GetWidth() {
+        return width;
+    }
+    double GetHeight() {
+        return height;
+    }
+    double GetDepth() {
+        return depth;
+    }
     double GetVolume() {
         return width * height * depth;
     }
@@ -38,10 +47,16 @@ private:
     double height;
 public:
     Cylinder(
-        double bottom,   //底辺の半径
+        double radius,   //底辺の半径
         double height) { //高さ
-        this->radius = bottom;
+        this->radius = radius;
         this->height = height;
+    }
+    double GetRadius() {
+        return radius;
+    }
+    double GetHeight() {
+        return height;
     }
     double GetSurface()
     {
@@ -64,6 +79,12 @@ public:
         this->bottom = bottom;
         this->height = height;
     }
+    double GetBottom() {
+        return bottom;
+    }
+    double GetHeight() {
+        return height;
+    }
     double GetSurface()
     {
         return M_PI * bottom * (sqrt(pow(height, 2.0f) + pow(bottom, 2.0f)) + bottom);
@@ -81,6 +102,9 @@ public:
     Sphere(
         double bottom) { //半径
         this->radius = bottom;
+    }
+    double GetRadius() {
+        return radius;
     }
     double GetSurface()
     {
